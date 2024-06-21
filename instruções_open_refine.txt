@@ -1,0 +1,26 @@
+Para agrupar dados que contenham os dois primeiros números de um ID em um banco de dados usando o OpenRefine, você pode seguir estes passos:
+
+Carregue seus dados no OpenRefine:
+
+Abra o OpenRefine e carregue seu arquivo de dados (pode ser um arquivo CSV, Excel, JSON, etc.).
+Crie uma nova coluna para os dois primeiros dígitos do ID:
+
+Selecione a coluna que contém os IDs.
+Clique no pequeno triângulo no cabeçalho da coluna e selecione Edit column > Add column based on this column....
+Use uma expressão GREL para extrair os dois primeiros dígitos:
+
+Na caixa de diálogo que aparece, insira um nome para a nova coluna, por exemplo, "PrimeirosDoisDígitos".
+No campo "Expression", insira a seguinte expressão GREL:
+
+value.substring(0,2)
+
+Esta expressão pega os dois primeiros caracteres do valor da coluna original.
+Agrupe os dados pelos dois primeiros dígitos:
+
+Após criar a nova coluna com os dois primeiros dígitos, você pode agrupar seus dados por esta coluna.
+Clique no pequeno triângulo no cabeçalho da nova coluna "PrimeirosDoisDígitos" e selecione Facet > Text facet.
+Explore e manipule os dados agrupados:
+
+À esquerda, você verá uma lista dos valores únicos na coluna "PrimeirosDoisDígitos" com a contagem de registros que possuem esses valores.
+Você pode selecionar um grupo específico para ver e editar apenas os registros desse grupo.
+
